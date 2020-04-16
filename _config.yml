@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Gary Liu"
+title                    : "Kuan-Lin Liu"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Kuan-Lin Liu"
+name                     : "Kuan-Lin (Gary) Liu"
 description              : "My Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Kuan-Lin Liu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a Master's student, having strong passion about NLP and Big Data."
+  bio              : "graduate student <\br> data scientist <\br> lifelong learner"
   location         : "New York, NY"
   email            :
   links:
@@ -131,7 +131,7 @@ footer:
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      url: "https://github.com/GaryLKL"
       # url:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
@@ -142,6 +142,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "Linkedin"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/kuanlinliu/"
 
 
 # Reading Files
