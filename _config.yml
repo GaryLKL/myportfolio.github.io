@@ -93,9 +93,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Kuan-Lin Liu"
+  name             : "Liu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "graduate student,\ndata scientist,\nlifelong learner"
+  bio              : "graduate student,<br>data scientist,<br>lifelong learner"
   #"graduate student," + "data scientist," + "lifelong learner"
   location         : "New York, NY"
   email            :
