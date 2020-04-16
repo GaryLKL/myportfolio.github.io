@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Kuan-Lin Liu"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Kuan-Lin (Gary) Liu"
+name                     : "Kuan-Lin Liu"
 description              : "My Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -93,9 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Liu"
+  name             : "Kuan-Lin Liu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "graduate student,<br>data scientist,<br>lifelong learner"
+  bio              : - >
+This is my multiline yaml frontmatter
+here.
   #"graduate student," + "data scientist," + "lifelong learner"
   location         : "New York, NY"
   email            :
