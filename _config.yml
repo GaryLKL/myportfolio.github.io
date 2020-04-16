@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Kuan-Lin Liu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "graduate student,\n" "data scientist,\n" "lifelong learner"
+  bio              : "graduate student,\ndata scientist,\nlifelong learner"
   #"graduate student," + "data scientist," + "lifelong learner"
   location         : "New York, NY"
   email            :
