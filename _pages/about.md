@@ -3,7 +3,7 @@ title: "About"
 permalink: /about/
 excerpt: blarg
 header:
-  image: "/images/washingtonpark.jpg"
+  overlay_image: "/images/washingtonpark.jpg"
 
 ---
 
