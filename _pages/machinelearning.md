@@ -6,6 +6,7 @@ author_profile: true
 excerpt: self-learning
 header: 
   overlay_image: "/images/programming.jpg"
+  overlay_filter: 0.5
 
 ---
 

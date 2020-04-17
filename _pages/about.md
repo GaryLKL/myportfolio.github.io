@@ -4,6 +4,7 @@ permalink: /about/
 excerpt: my introduction
 header:
   overlay_image: "/images/washingtonpark.jpg"
+  overlay_filter: 0.5
 
 ---
 
