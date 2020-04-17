@@ -94,11 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "Kuan-Lin Liu"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : - >
-This is my multiline yaml frontmatter
-here.
-  #"graduate student," + "data scientist," + "lifelong learner"
+  avatar           : "/images/bio-photo.jpg"
+  bio              : "graduate student,<br>data scientist,<br>lifelong learner"
   location         : "New York, NY"
   email            :
   links:
