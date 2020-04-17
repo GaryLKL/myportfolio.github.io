@@ -3,6 +3,7 @@ layout: archive
 permalink: /machine-learning/
 title: "Data Science Project Posts by Tags"
 author_profile: true
+excerpt: blarg
 header: 
   image: "/images/programming.jpg"
 

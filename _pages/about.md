@@ -1,6 +1,7 @@
 ---
 title: "About"
 permalink: /about/
+excerpt: blarg
 header:
   image: "/images/washingtonpark.jpg"
 
