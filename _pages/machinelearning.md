@@ -3,9 +3,9 @@ layout: archive
 permalink: /machine-learning/
 title: "Data Science Project Posts by Tags"
 author_profile: true
-excerpt: blarg
+excerpt: self-learning
 header: 
-  image: "/images/programming.jpg"
+  overlay_image: "/images/programming.jpg"
 
 ---
 

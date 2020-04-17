@@ -1,7 +1,7 @@
 ---
 title: "About"
 permalink: /about/
-excerpt: blarg
+excerpt: my introduction
 header:
   overlay_image: "/images/washingtonpark.jpg"
 
