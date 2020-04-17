@@ -93,8 +93,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Kuan-Lin Liu"
-  avatar           : "/images/bio-photo.jpg"
+  name             : #"Kuan-Lin Liu"
+  avatar           : #"/images/bio-photo.jpg"
   bio              : #"graduate student,<br>data scientist,<br>lifelong learner"
   location         : "New York, NY"
   email            :
