@@ -1,14 +1,4 @@
----
-title: "About"
-permalink: /about/
-excerpt: 
-header:
-  overlay_image: "/images/washingtonpark.jpg"
-  overlay_filter: 0.5
-
----
-
-<img src="https://garylkl.github.io/images/myphoto2.jpg" class="img-circle" alt="Cinque Terre">
+I"Û<p><img src="https://garylkl.github.io/images/myphoto2.jpg" class="img-circle" alt="Cinque Terre" /></p>
 
 <div class="span7 text-center">
 <button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()">Resume</button>
@@ -32,3 +22,4 @@ function relocate_linkedin()
 <p>
 I'm a Master graduate student who is specialized at machine learning, natural language processing, and big data techniques.
 </p>
+:ET

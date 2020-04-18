@@ -32,7 +32,7 @@ toc_label: "Content"
 <script>
 function relocate_home()
 {
-     location.href = "https://garylkl.github.io/pdf_files/resume_kuanlinliu.pdf";
+     location.href = "https://garylkl.github.io/pdf_files/bdad_fina.pdf";
 } 
 </script>
 
