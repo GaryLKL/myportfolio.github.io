@@ -49,16 +49,17 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: bold;
   font-size: 1.5em;
-  font-family: $sans-serif;
+  font-family: Florence;
+  font-style: italic;
+  font-weight: bold;
   // z-index: 20;
 }
 
 .site-subtitle {
   display: block;
   font-size: $type-size-4;
-  font-family: $times;
+  font-family: $global-font-family;
 }
 
 .masthead__menu {
@@ -81,6 +82,7 @@
     padding: 0;
     clear: both;
     list-style-type: none;
+
   }
 }
 
@@ -88,6 +90,8 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-weight: bold;
+  font-family: $global-font-family;
 
   &--lg {
     padding-right: 2em;

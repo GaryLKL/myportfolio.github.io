@@ -11,7 +11,7 @@ sidebar:
   - title: "Skill Sets"
     text: "Python <br>  <br> Web Scraping (Pyppeteer, Selenium, BeautifulSoup) <br> Matplotlib, Seaborn"
 gallery:
-  - url: /images/introds/heatmap.png
+  - url: /images/introds/heatmap.jpg
     image_path: /images/introds/heatmap.jpg
     alt: "placeholder image 1"
   - url: /images/introds/mutualinformation.jpg

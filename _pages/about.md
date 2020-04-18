@@ -1,15 +1,12 @@
 ---
 title: "About"
 permalink: /about/
-excerpt: 
-header:
-  overlay_image: "/images/washingtonpark.jpg"
-  overlay_filter: 0.5
+
 
 ---
 
 
-<p style="text-align: center"><img src="/images/myphoto2.jpg" height="auto" width="300" style="border-radius:50%">
+<p style="text-align: center"><img src="/images/myphoto2.jpg" height="auto" width="200" style="border-radius:50%">
 </p>
 
 

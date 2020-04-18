@@ -2,7 +2,7 @@
 title: "A Crowdfunding Campaign You Can’t Refuse"
 excerpt: " "
 header:
-  teaser: /images/bdad/wordcloud.jpg
+  teaser: /images/bdad/money.jpg
 sidebar:
   - title: "Course"
     image: /images/myphoto.jpg
@@ -14,11 +14,11 @@ gallery:
   - url: /images/bdad/workflow.jpg
     image_path: /images/bdad/workflow.jpg
     alt: "placeholder image 1"
-  - url: /images/bdad/tableau.png
+  - url: /images/bdad/tableau.jpg
     image_path: /images/bdad/tableau.jpg
     alt: "placeholder image 2"
-  - url: /images/bdad/workflow2.png
-    image_path: /images/bdad/workflow2.jpg
+  - url: /images/bdad/wordcloud.jpg
+    image_path: /images/bdad/wordcloud.jpg
     alt: "placeholder image 3"
 toc: true
 toc_label: "Content"
