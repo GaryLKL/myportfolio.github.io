@@ -3,7 +3,7 @@ layout: archive
 permalink: /data-science/
 title: "Data Science"
 author_profile: true
-excerpt: "My Personal Note"
+excerpt: " "
 header: 
   overlay_image: "/images/programming.jpg"
   overlay_filter: 0.5

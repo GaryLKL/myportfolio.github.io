@@ -1,0 +1,30 @@
+I"h<figure class="one">
+    <a href="/images/myphoto.jpg"><img src="/images/myphoto2.jpg" /></a>
+    <figcaption>Caption describing these two images.</figcaption>
+</figure>
+
+<p><img src="cinqueterre.jpg" class="img-circle" alt="Cinque Terre" /></p>
+
+<div class="span7 text-center">
+<button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()">Resume</button>
+<button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_linkedin()">Linkedin</button>
+
+<script>
+function relocate_home()
+{
+     location.href = "https://garylkl.github.io/pdf_files/resume_kuanlinliu.pdf";
+} 
+</script>
+
+<script>
+function relocate_linkedin()
+{
+     location.href = "https://www.linkedin.com/in/kuanlinliu/";
+} 
+</script>
+</div>
+
+<p>
+I'm a Master graduate student who is specialized at machine learning, natural language processing, and big data techniques.
+</p>
+:ET

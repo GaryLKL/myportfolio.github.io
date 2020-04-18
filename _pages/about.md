@@ -8,9 +8,12 @@ header:
 
 ---
 
-<img src="https://garylkl.github.io/images/myphoto2.jpg" class="img-circle" alt="Cinque Terre">
 
-<div class="span7 text-center">
+<p style="text-align: center"><img src="/images/myphoto2.jpg" height="auto" width="300" style="border-radius:50%">
+</p>
+
+
+<p align="center">
 <button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()">Resume</button>
 <button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_linkedin()">Linkedin</button>
 
@@ -27,8 +30,9 @@ function relocate_linkedin()
      location.href = "https://www.linkedin.com/in/kuanlinliu/";
 } 
 </script>
-</div>
-
-<p>
-I'm a Master graduate student who is specialized at machine learning, natural language processing, and big data techniques.
 </p>
+
+
+I'm a Master graduate student who is specialized at machine learning, natural language processing, and big data techniques. Because of the COVID-19 outbreak, my incoming data science internship at Covance, Inc got cancelled. Still, that which does not kill me, makes me stronger. The revocation turns out to the born of this personal website. If you are also a data science enthusiast or looking for a data scientist/engineer, you may find interesting here.
+
+> I am actively seeking a remote or on-site data science internship opportunity.
