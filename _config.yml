@@ -120,6 +120,9 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/kuanlinliu/"
+    - label: "Resume"
+      icon: "far fa-fw fa-id-badge"
+      url: "https://garylkl.github.io/pdf_files/resume_kuanlinliu.pdf"
 
 # Site Footer
 footer:
@@ -295,7 +298,21 @@ defaults:
       layout: single
       author_profile: true
 
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
 breadcrumbs:
   root:
     hide: false  # show breadcrumbs on root/home page
     image: false # Show image or title text
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
