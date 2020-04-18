@@ -29,7 +29,8 @@ function relocate_linkedin()
 </script>
 </p>
 
+> I am actively seeking a remote or on-site summer 2020 data science internship opportunity.
 
-I'm a Master graduate student who is specialized at machine learning, natural language processing, and big data techniques. Because of the COVID-19 outbreak, my incoming data science internship at Covance, Inc got cancelled. Still, that which does not kill me, makes me stronger. The revocation turns out to the born of this personal website. If you are also a data science enthusiast or looking for a data scientist/engineer, you may find interesting here.
+I'm a Master graduate student who is specialized at machine learning, natural language processing, and big data techniques. Because of the COVID-19 outbreak, my incoming data science internship at Covance, Inc got cancelled. Still, that which does not kill me, makes me stronger. The revocation turned out to be the born of this personal website. If you are also a data science enthusiast or having open intern positions, you may find interesting here.
 
-> I am actively seeking a remote or on-site data science internship opportunity.
+
