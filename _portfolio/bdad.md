@@ -38,7 +38,7 @@ toc_label: "Content"
 <script>
 function relocate_home()
 {
-     location.href = "https://garylkl.github.io/pdf_files/bdad_fina.pdf";
+     location.href = "https://garylkl.github.io/pdf_files/bdad_final.pdf";
 } 
 </script>
 

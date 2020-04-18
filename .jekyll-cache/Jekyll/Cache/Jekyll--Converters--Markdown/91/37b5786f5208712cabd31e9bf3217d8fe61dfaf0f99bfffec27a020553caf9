@@ -1,11 +1,11 @@
-I"ç<h2 id="introduction">Introduction</h2>
+I"é<h2 id="introduction">Introduction</h2>
 
 <p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()">Paper Link</button></p>
 
 <script>
 function relocate_home()
 {
-     location.href = "https://garylkl.github.io/pdf_files/bdad_fina.pdf";
+     location.href = "https://garylkl.github.io/pdf_files/bdad_final.pdf";
 } 
 </script>
 
