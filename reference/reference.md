@@ -1,1 +1,2 @@
-1. [redirect setting](https://stackoverflow.com/questions/39657226/jekyll-redirect-link)
+1. [redirect setting-absolute url](https://stackoverflow.com/questions/39657226/jekyll-redirect-link)
+2. [redirect setting works for local url](https://superdevresources.com/redirects-jekyll-github-pages/)
