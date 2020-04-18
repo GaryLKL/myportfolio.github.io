@@ -9,7 +9,16 @@ sidebar:
     image_alt: "image"
     text: "DS-GA 1001: <br> Introduction to Data Science"
   - title: "Skill Sets"
-    text: "Python <br>  <br> Web Scraping (Pyppeteer, Selenium, BeautifulSoup) <br> Matplotlib, Seaborn"
+    text: "Python 
+          <br> Machine Learning 
+          <br> &emsp;- Scikit-learn 
+          <br> Web Scraping
+          <br>&emsp;- Pyppeteer
+          <br>&emsp;- Selenium
+          <br>&emsp;- BeautifulSoup
+          <br> Visualization
+          <br>&emsp;- Matplotlib
+          <br>&emsp;- Seaborn"
 gallery:
   - url: /images/introds/heatmap.jpg
     image_path: /images/introds/heatmap.jpg

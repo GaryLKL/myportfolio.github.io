@@ -9,7 +9,13 @@ sidebar:
     image_alt: "image"
     text: "CSCI-GA.3033: <br> Big Data Application Development"
   - title: "Skill Sets"
-    text: "Scala Programming <br> Tableau Visualization <br> ML Pipelines (MLlib) <br> Data Cleaning"
+    text: "Spark
+    		<br>&emsp;- Scala
+    		<br>&emsp;- SparkSQL
+    		<br>&emsp;- Spark's MLlib
+    		<br> Tableau Visualization
+    		<br> Machine Learning Pipelines
+    		<br> Text Data Cleaning"
 gallery:
   - url: /images/bdad/workflow.jpg
     image_path: /images/bdad/workflow.jpg
