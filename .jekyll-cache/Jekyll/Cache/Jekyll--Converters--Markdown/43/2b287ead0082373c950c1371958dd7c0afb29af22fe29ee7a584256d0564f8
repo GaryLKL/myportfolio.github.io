@@ -1,0 +1,10 @@
+I"�<h2 id="introduction">Introduction</h2>
+
+<p>Nowadays, it’s very easy to obtain a series of text data. For instance, Twitter API provides you a short path to scrape people’s posts on Twitter. Even so, you may wonder how do you deal with the Tweets. How do you start a NLP project?</p>
+
+<p>However, Natural Language Processing tasks could include automatic summarization, translation, sentence classification, etc. Therefore, more precisely we will focus on text classification in this article.</p>
+
+<p>Note that we will only talk about some general steps since you cannot find one specific process which will fit on any data tasks.</p>
+
+<h2 id="preprocessing">Preprocessing</h2>
+:ET
