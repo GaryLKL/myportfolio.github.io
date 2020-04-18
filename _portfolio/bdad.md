@@ -15,10 +15,10 @@ gallery:
     image_path: /images/bdad/workflow.jpg
     alt: "placeholder image 1"
   - url: /images/bdad/tableau.png
-    image_path: /images/bdad/tableau.png
+    image_path: /images/bdad/tableau.jpg
     alt: "placeholder image 2"
   - url: /images/bdad/workflow2.png
-    image_path: /images/bdad/workflow2.png
+    image_path: /images/bdad/workflow2.jpg
     alt: "placeholder image 3"
 toc: true
 toc_label: "Content"

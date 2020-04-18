@@ -12,13 +12,13 @@ sidebar:
     text: "Python <br>  <br> Web Scraping (Pyppeteer, Selenium, BeautifulSoup) <br> Matplotlib, Seaborn"
 gallery:
   - url: /images/introds/heatmap.png
-    image_path: /images/introds/heatmap.png
+    image_path: /images/introds/heatmap.jpg
     alt: "placeholder image 1"
-  - url: /images/introds/mutualinformation.png
-    image_path: /images/introds/mutualinformation.png
+  - url: /images/introds/mutualinformation.jpg
+    image_path: /images/introds/mutualinformation.jpg
     alt: "placeholder image 2"
-  - url: /images/introds/timeseriescv.png
-    image_path: /images/introds/timeseriescv.png
+  - url: /images/introds/timeseriescv.jpg
+    image_path: /images/introds/timeseriescv.jpg
     alt: "placeholder image 3"
 toc: true
 toc_label: "Content"
