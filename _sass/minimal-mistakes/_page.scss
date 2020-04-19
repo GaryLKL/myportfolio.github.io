@@ -62,7 +62,7 @@ body {
       float: left;
       margin-left: 0;
       margin-right: 0;
-      width: 100%;
+      width: 35em;
       clear: both;
     }
   }
@@ -72,7 +72,7 @@ body {
   margin-top: 0;
   line-height: 1;
   font-family: $global-font-family;
-  font-size: 1.5em;
+  font-size: 1.6em;
   & + .page__meta {
     margin-top: -0.5em;
   }
@@ -87,6 +87,7 @@ body {
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
+
   }
 
 	h1, h2, h3, h4, h5, h6 {
@@ -94,7 +95,7 @@ body {
 			position: relative;
 			left: 0.5em;
 			opacity: 0;
-			font-size: 0.8em;
+			font-size: 1em;
 			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
 			-moz-transition: opacity 0.2s ease-in-out 0.1s;
 			-o-transition: opacity 0.2s ease-in-out 0.1s;
@@ -109,7 +110,7 @@ body {
   p,
   li,
   dl {
-    font-size:  0.8em;
+    font-size:  1em;
   }
 
   /* paragraph indents */
