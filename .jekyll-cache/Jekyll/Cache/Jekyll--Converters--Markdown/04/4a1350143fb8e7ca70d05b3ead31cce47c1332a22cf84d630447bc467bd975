@@ -1,6 +1,7 @@
-I"Ù	<h2 id="introduction">Introduction</h2>
+I"*
+<h2 id="introduction">Introduction</h2>
 
-<p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()">Paper Link</button></p>
+<p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button></p>
 
 <script>
 function relocate_home()
