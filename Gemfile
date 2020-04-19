@@ -3,6 +3,4 @@ gemspec
 
 gem 'jekyll-redirect-from'
 
-if ENV["JEKYLL_VERSION"]
-  gem "jekyll", "~> #{ENV["JEKYLL_VERSION"]}"
-end
+gem "jekyll-webp"

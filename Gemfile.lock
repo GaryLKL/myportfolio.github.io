@@ -57,6 +57,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll-webp (1.0.0)
     kramdown (2.1.0)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -93,6 +94,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   jekyll-redirect-from
+  jekyll-webp
   minimal-mistakes-jekyll!
   rake (>= 12.3.3)
 
