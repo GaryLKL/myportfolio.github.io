@@ -33,7 +33,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-04-19T23:18:58+08:00">
+  <meta property="article:published_time" content="2020-04-19T23:32:52+08:00">
 
 
 
@@ -201,7 +201,7 @@
              alt="image">
       
       <h3>Course</h3>
-      <p>DS-GA 1001: <br /> Introduction to Data Science</p>
+      <p>NYU DS-GA 1001: <br /> Introduction to Data Science</p>
 
       
     
@@ -220,7 +220,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Predicting the Outcome of Professional Basketball Game">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2020-04-19T23:18:58+08:00">
+    <meta itemprop="datePublished" content="2020-04-19T23:32:52+08:00">
     
 
     <div class="page__inner-wrap">
@@ -241,14 +241,14 @@
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#web-scraping">Web Scraping</a></li>
   <li><a href="#potential-selection-bias">Potential Selection Bias</a></li>
+  <li><a href="#feature-selection">Feature Selection</a></li>
   <li><a href="#blocking-time-series-split">Blocking Time Series Split</a></li>
 </ul>
 
             </nav>
           </aside>
         
-        <h2 id="introduction">Introduction</h2>
-
+        <p></p>
 <p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button></p>
 
 <script>
@@ -257,6 +257,8 @@ function relocate_home()
      location.href = "https://garylkl.github.io/pdf_files/introds_final.pdf";
 } 
 </script>
+
+<h2 id="introduction">Introduction</h2>
 
 <p>The sports of basketball fascinates us for its unpredictability, but whenever we look retrospectively, the result almost always makes sense. We can explain a victory by many factors: better star players, better team chemistry, better coaching, better momentum, and the list goes on and on. With the belief that the result of a basketball game is not entirely random, we landed this project to predict the result of the game based on the previous records of the participating opponents.</p>
 
@@ -294,6 +296,10 @@ function relocate_home()
 
 <p>NBA rules have changed significantly since the start of league, leading to a great change in playing styles in the NBA. Since the data we collected are from 2008 to 2019, our model may achieve much worse results when trying to predict the outcomes of games a long time ago, like in the 20th century.</p>
 
+<h2 id="feature-selection">Feature Selection</h2>
+
+<p>Since feature selection is crucial in determining the result, we chose to design two methods to conduct feature selection: one is first to drop highly correlated features and then use the random forest to select the most 15 important features; the other is to use mutual information. By making feature selection in such two ways, we ended up in 16 sets of features for eight train-test splits. Now, we will call the first method using correlation and random forest as the feature selection strategy one and mutual information as the feature selection strategy two.</p>
+
 <h2 id="blocking-time-series-split">Blocking Time Series Split</h2>
 
 <p>To avoid potential problems of data leakage, traditional Cross Validation does not apply here due to its ran- domness. Instead, we used Blocking Time Series Split[8] written by staff in Packt as a strategy to tune the hyperparameters. Different from k-fold Cross Validation, Blocking Time Series Split uses a smaller set of data as test data and a fixed size of data before testing data as training data.</p>
@@ -307,7 +313,7 @@ function relocate_home()
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-04-19T23:18:58+08:00">April 19, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-04-19T23:32:52+08:00">April 19, 2020</time></p>
         
       </footer>
 

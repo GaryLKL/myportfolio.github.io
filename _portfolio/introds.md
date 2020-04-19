@@ -7,7 +7,7 @@ sidebar:
   - title: "Course"
     image: /images/myphoto.jpg
     image_alt: "image"
-    text: "DS-GA 1001: <br> Introduction to Data Science"
+    text: "NYU DS-GA 1001: <br> Introduction to Data Science"
   - title: "Skill Sets"
     text: "Python 
           <br> Machine Learning 
@@ -34,8 +34,8 @@ toc_label: "Content"
 ---
 
 
-## Introduction
 
+<p></p>
 <button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button>
 
 <script>
@@ -45,6 +45,7 @@ function relocate_home()
 } 
 </script>
 
+## Introduction
 
 The sports of basketball fascinates us for its unpredictability, but whenever we look retrospectively, the result almost always makes sense. We can explain a victory by many factors: better star players, better team chemistry, better coaching, better momentum, and the list goes on and on. With the belief that the result of a basketball game is not entirely random, we landed this project to predict the result of the game based on the previous records of the participating opponents.
 
@@ -57,6 +58,10 @@ There was no comprehensive dataset that includes all the information we need for
 ## Potential Selection Bias
 
 NBA rules have changed significantly since the start of league, leading to a great change in playing styles in the NBA. Since the data we collected are from 2008 to 2019, our model may achieve much worse results when trying to predict the outcomes of games a long time ago, like in the 20th century.
+
+## Feature Selection
+
+Since feature selection is crucial in determining the result, we chose to design two methods to conduct feature selection: one is first to drop highly correlated features and then use the random forest to select the most 15 important features; the other is to use mutual information. By making feature selection in such two ways, we ended up in 16 sets of features for eight train-test splits. Now, we will call the first method using correlation and random forest as the feature selection strategy one and mutual information as the feature selection strategy two.
 
 ## Blocking Time Series Split
 
