@@ -341,11 +341,11 @@ webp:
   gifs: [".gif"]
 
   # Set to true to always regenerate existing webp files
-  regenerate: false
+  regenerate: true
 
   # Local path to the WebP utilities to use (relative or absolute)
   # Omit or leave as nil to use the utilities shipped with the gem, override only to use your local install
-  webp_path: nil
+  webp_path: "_plugins/libwebp/"
 
   # List of files or directories to exclude
   # e.g. custom or hand generated webp conversion files
