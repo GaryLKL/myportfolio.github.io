@@ -1,7 +1,9 @@
 ---
 title: "About"
 permalink: /about/
-
+author_profile: true
+header:
+  image: /images/newyork2.jpg
 
 ---
 
@@ -29,8 +31,10 @@ function relocate_linkedin()
 </script>
 </p>
 
-> I am actively seeking a remote or on-site summer 2020 data science internship opportunity.
+> I am actively seeking a remote or on-site Summer 2020 Data Science internship opportunity.
 
-I'm a Master graduate student who is specialized at machine learning, natural language processing, and big data techniques. Because of the COVID-19 outbreak, my incoming data science internship at Covance, Inc got cancelled. Still, that which does not kill me, makes me stronger. The revocation turned out to be the born of this personal website. If you are also a data science enthusiast or having open intern positions, you may find interesting here.
+My name is Kuan-Lin Liu, aka *Gary*, a current graduate student at New York University. Pursuing a Master's degree in Data Science, I have research/academic interests in natural language processing and big data techniques. 
+
+Because of the COVID-19 outbreak, my incoming data science internship at Covance, Inc got cancelled. Still, that which does not kill me, makes me stronger. The offer revocation turned out to be the born of this personal blog where I am going to arrange my portfolio and machine learning notes.
 
 
