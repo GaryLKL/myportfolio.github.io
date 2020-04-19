@@ -322,7 +322,7 @@ collections:
 # Site configuration for the WebP Generator Plugin
 # The values here represent the defaults if nothing is set
 webp:
-  enabled: true
+  enabled: false
   
   # The quality of the webp conversion 0 to 100 (where 100 is least lossy)
   quality: 75
@@ -345,7 +345,7 @@ webp:
 
   # Local path to the WebP utilities to use (relative or absolute)
   # Omit or leave as nil to use the utilities shipped with the gem, override only to use your local install
-  webp_path: "_plugins/libwebp/"
+  webp_path: nil
 
   # List of files or directories to exclude
   # e.g. custom or hand generated webp conversion files
