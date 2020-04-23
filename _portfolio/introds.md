@@ -1,6 +1,6 @@
 ---
 title: "Predicting the Outcome of Professional Basketball Game"
-excerpt: " "
+excerpt: "Web scraping box scores and building Machine Learning pipelines"
 header:
   teaser: /images/introds/basketball.jpg
 sidebar:

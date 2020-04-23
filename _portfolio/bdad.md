@@ -1,6 +1,7 @@
 ---
 title: "A Crowdfunding Campaign You Can’t Refuse"
 excerpt: " "
+excerpt: "Predicting Kickstarter projects' success and building recommendation systems"
 header:
   teaser: /images/bdad/money.jpg
 sidebar:
