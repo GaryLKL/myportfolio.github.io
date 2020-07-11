@@ -1,9 +1,0 @@
-I"¼<ul class="toc__menu">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#feature-engineering">Feature Engineering</a>
-      - {:.} <a href="#1-linguistic-features">1. Linguistic Features</a>
-      - {:.} <a href="#2-review-centric-features">2. Review-centric Features</a>
-      - {:.} <a href="#3-reviewer-centric-features">3. Reviewer-centric Features</a></li>
-  <li><a href="#imbalanced-data">Imbalanced Data</a></li>
-</ul>
-:ET

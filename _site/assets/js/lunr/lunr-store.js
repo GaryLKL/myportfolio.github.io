@@ -24,10 +24,10 @@ var store = [{
         "teaser": "http://localhost:4000/images/ml/fake.jpg"
       },{
         "title": "Extractive-Abstractive of Text Summarization Stacking Model",
-        "excerpt":"Paper Link Introduction In this work, we aim to increase the chance of success for the Kickstarter project owners. We collect three datasets: product profiles of Kickstarter, tweets on Twitter and product information from Amazon. Analytic and machine learning models are built upon these datasets to provide insights for project...","categories": [],
+        "excerpt":"Article Link Abstract Text summarization is a widely used technique in the information explosion world. However, one of the summarization approach, abstractive, encounter the readability issue from long text and the decreasing from repetition rate of the outcome are in the dilemma situation for improvement. In this work, we introduce...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/portfolio/nlu/",
-        "teaser": "http://localhost:4000/images/bdad/money.jpg"
+        "teaser": "http://localhost:4000/images/nlu/summary.jpg"
       },{
         "title": "Steps of a NLP Project",
         "excerpt":"Introduction Nowadays, it’s very easy to obtain a series of text data. For instance, Twitter API provides you a short path to scrape people’s posts on Twitter. Even so, you may wonder how do you deal with the Tweets. How do you start a NLP project? However, Natural Language Processing...","categories": [],
