@@ -3,7 +3,7 @@ title: "A Crowdfunding Campaign You Can’t Refuse"
 excerpt: " "
 excerpt: "Predicting Kickstarter projects' success and building recommendation systems"
 header:
-  teaser: /images/bdad/money.jpg
+  teaser: /images/bdad/fundraising.jpg
 sidebar:
   - title: "Course"
     image: /images/myphoto.jpg
@@ -31,7 +31,7 @@ toc: true
 toc_label: "Content"
 ---
 <p></p>
-<button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button>
+<button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Article Link</button>
 
 <script>
 function relocate_home()

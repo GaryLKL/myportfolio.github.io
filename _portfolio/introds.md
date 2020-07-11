@@ -36,7 +36,7 @@ toc_label: "Content"
 
 
 <p></p>
-<button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button>
+<button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Article Link</button>
 
 <script>
 function relocate_home()

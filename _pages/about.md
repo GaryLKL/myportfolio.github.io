@@ -19,7 +19,7 @@ header:
 <script>
 function relocate_home()
 {
-     location.href = "https://garylkl.github.io/pdf_files/Resume_Summer_Intern_KuanLinLiu.pdf";
+     location.href = "https://garylkl.github.io/pdf_files/Resume_KuanLinLiu.pdf";
 } 
 </script>
 

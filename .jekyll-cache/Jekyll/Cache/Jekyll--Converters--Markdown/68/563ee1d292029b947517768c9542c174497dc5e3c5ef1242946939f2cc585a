@@ -1,0 +1,70 @@
+I")<p></p>
+<p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button></p>
+
+<script>
+function relocate_home()
+{
+     location.href = "https://garylkl.github.io/pdf_files/ml_final.pdf";
+} 
+</script>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Online reviews provide customers and business owners a good evaluation metric for the target products or services. Therefore, knowing the authenticity of reviews is essential, because they may affect how we make a decision. In this work, we tackled the fake review detection problem by designing new features, re-sampling training data and ensembling different machine learning models. Our best performance XGBoost model achieved 0.404 Average Precision and 0.862 AUC score on test data.</p>
+
+<figure class="third ">
+  
+    
+      <a href="/images/ml/review-length.jpg">
+          <img src="/images/ml/review-length.jpg" alt="placeholder image 1" />
+      </a>
+    
+  
+    
+      <a href="/images/ml/rating-label.jpg">
+          <img src="/images/ml/rating-label.jpg" alt="placeholder image 2" />
+      </a>
+    
+  
+    
+      <a href="/images/ml/table.jpg">
+          <img src="/images/ml/table.jpg" alt="placeholder image 3" />
+      </a>
+    
+  
+  
+    <figcaption>
+</figcaption>
+  
+</figure>
+
+<h2 id="behavioral-feature-engineering">Behavioral Feature Engineering</h2>
+
+<ul>
+  <li>Review length</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Absolute rating deviation from product’s average rating \cite{li:2011}: $d_{ij}=</td>
+          <td>r_{ij}- \frac{1}{J}\sum_j r_{ij}</td>
+          <td>$, where $r_{ij}$ is the rating from user $i$ to business $j$.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Earlier time review \cite{mukherjee:20132}: $max(0, 1-(\frac{t_{now}-t_{first}}{T}))$. Whether the current review is written within the $T=70$ months from the first review for this product. It’s reasonable for a spammer to post a review as early as possible to increase their chances of being viewed.</li>
+  <li>Whether a review is written on holiday or not [new]: It’s more effective to write fake reviews on holidays, since people are more likely to go out on these days.</li>
+  <li>Whether a review is written on weekend or not [new]</li>
+</ul>
+
+<h2 id="nlp-based-prediction">NLP-based Prediction</h2>
+
+<p>We remove all special characters and white spaces, lower each character, remove stopwords and lemmatize. Afterwards, we choose pretrained <a href="https://nlp.stanford.edu/projects/glove/">GloVe embedding</a> on Twitter to encode each product description as a 200d vector. Then, we feed a batch with 512 vectors into a multilayer perceptron (MLP). The final layer could be either a sigmoid or softmax layer. In the former case, the output is score within the range of [0,1]. We should scale it back to [1,5] as the original Amazon ratings. In the latter case, the output is the probability for each of the 5 rating classes.</p>
+
+<h2 id="keyword-recommendation">Keyword Recommendation</h2>
+
+<p>Given the description of a Kickstarter campaign as a query document, we would like to the retrieve the most similar documents from the Amazon dataset. The most straightforward idea is to compare its cosine similarity to each document one by one. However, this is compute-intensive. Therefore, we adopt locality sensitive hashing (LSH) to map each 200d GloVe embedding to a lower dimensional binary vector. The close documents in the original vector space will very likely be close in the new space. And we can reduce a great amount of search time.</p>
+
+<p>Finally, we select the high-rated documents within top-k similar documents and compute the mean of their TF-IDF vector. If a word is more important, it will have a higher value in the resulting mean vector.</p>
+:ET

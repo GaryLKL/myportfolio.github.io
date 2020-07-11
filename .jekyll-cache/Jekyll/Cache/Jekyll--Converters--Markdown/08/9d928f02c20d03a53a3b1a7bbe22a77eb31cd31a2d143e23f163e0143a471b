@@ -1,0 +1,56 @@
+I"n<p></p>
+<p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button></p>
+
+<script>
+function relocate_home()
+{
+     location.href = "https://garylkl.github.io/pdf_files/bdad_final.pdf";
+} 
+</script>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>In this work, we aim to increase the chance of success for the Kickstarter project owners. We collect three datasets: product profiles of Kickstarter, tweets on Twitter and product information from Amazon. Analytic and machine learning models are built upon these datasets to provide insights for project owners. Finally, we build a keyword recommendation system to automatically find these keywords for the owners.</p>
+
+<p>To provide better insights, the history data of Kickstarter itself may not be enough. First, its corpus is smaller comparing to other text datasets. Second, other sources may also serve as strong indicators of success, such as reactions on social media. That’s why we choose to include the Amazon and Twitter datasets. We examine the synergies between these dataset carefully with Tableau visualization and conduct thorough experiments to substantiate our claims.</p>
+
+<figure class="third ">
+  
+    
+      <a href="/images/bdad/rating-label.jpg">
+          <img src="/images/bdad/workflow.jpg" alt="placeholder image 1" />
+      </a>
+    
+  
+    
+      <a href="/images/bdad/tableau.jpg">
+          <img src="/images/bdad/tableau.jpg" alt="placeholder image 2" />
+      </a>
+    
+  
+    
+      <a href="/images/bdad/wordcloud.jpg">
+          <img src="/images/bdad/wordcloud.jpg" alt="placeholder image 3" />
+      </a>
+    
+  
+  
+    <figcaption>
+</figcaption>
+  
+</figure>
+
+<h2 id="feature-based-prediction">Feature-based Prediction</h2>
+
+<p>In order to make prediction, we randomly split the whole dataset into a training set and a testing set. 10-fold cross validation has been executed on the training set to tune the parameters. MLlib provides several traditional machine learning API. Among all, we used logistic regression with a L2 regularizer as the baseline model. Besides, two tree- based model, decision tree and random forest, are built with a combination of hyperparameters. However, MLlib only has the option of linear support vector machine without the choice of a common kernel technique, radial basis function.</p>
+
+<h2 id="nlp-based-prediction">NLP-based Prediction</h2>
+
+<p>We remove all special characters and white spaces, lower each character, remove stopwords and lemmatize. Afterwards, we choose pretrained <a href="https://nlp.stanford.edu/projects/glove/">GloVe embedding</a> on Twitter to encode each product description as a 200d vector. Then, we feed a batch with 512 vectors into a multilayer perceptron (MLP). The final layer could be either a sigmoid or softmax layer. In the former case, the output is score within the range of [0,1]. We should scale it back to [1,5] as the original Amazon ratings. In the latter case, the output is the probability for each of the 5 rating classes.</p>
+
+<h2 id="keyword-recommendation">Keyword Recommendation</h2>
+
+<p>Given the description of a Kickstarter campaign as a query document, we would like to the retrieve the most similar documents from the Amazon dataset. The most straightforward idea is to compare its cosine similarity to each document one by one. However, this is compute-intensive. Therefore, we adopt locality sensitive hashing (LSH) to map each 200d GloVe embedding to a lower dimensional binary vector. The close documents in the original vector space will very likely be close in the new space. And we can reduce a great amount of search time.</p>
+
+<p>Finally, we select the high-rated documents within top-k similar documents and compute the mean of their TF-IDF vector. If a word is more important, it will have a higher value in the resulting mean vector.</p>
+:ET

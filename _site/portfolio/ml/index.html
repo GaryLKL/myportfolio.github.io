@@ -1,0 +1,444 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Fake Reviews Detection for Imbalanced Dataset - Gary Liu</title>
+<meta name="description" content="Focusing on feature engineering and building ML models with Scikit-learn ">
+
+
+  <meta name="author" content="Kuan-Lin (Gary) Liu">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Gary Liu">
+<meta property="og:title" content="Fake Reviews Detection for Imbalanced Dataset">
+<meta property="og:url" content="http://localhost:4000/portfolio/ml/">
+
+
+  <meta property="og:description" content="Focusing on feature engineering and building ML models with Scikit-learn ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/ml/fake.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-07-11T23:42:09+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/portfolio/ml/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Gary Liu",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Gary Liu Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Gary Liu
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="/articles/">Blog</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/portfolio" itemprop="item"><span itemprop="name">Portfolio</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Fake Reviews Detection for Imbalanced Dataset</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/myphoto.jpg"
+             alt="image">
+      
+      <h3>Course</h3>
+      <p>NYU DS-GA 1003: <br /> Machine Learning</p>
+
+      
+    
+      
+      <h3>Skill Sets</h3>
+      <p>Python <br /> - PySpark <br /> - Scikit-learn, NLTK <br /> - Bag-of-Words, GloVe <br /> Feature Engineering <br /> Imbalanced Data</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Fake Reviews Detection for Imbalanced Dataset">
+    <meta itemprop="description" content="Focusing on feature engineering and building ML models with Scikit-learn">
+    <meta itemprop="datePublished" content="2020-07-11T23:42:09+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Fake Reviews Detection for Imbalanced Dataset
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Content</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#feature-engineering">Feature Engineering</a>
+      - {:.} <a href="#1-linguistic-features">1. Linguistic Features</a>
+      - {:.} <a href="#2-review-centric-features">2. Review-centric Features</a>
+      - {:.} <a href="#3-reviewer-centric-features">3. Reviewer-centric Features</a></li>
+  <li><a href="#dealing-with-imbalanced-data">Dealing with Imbalanced Data</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p></p>
+<p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Article Link</button></p>
+
+<script>
+function relocate_home()
+{
+     location.href = "https://garylkl.github.io/pdf_files/ml_final.pdf";
+} 
+</script>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Online reviews provide customers and business owners a good evaluation metric for the target products or services. Therefore, knowing the authenticity of reviews is essential, because they may affect how we make a decision. In this work, we tackled the fake review detection problem by designing new features, re-sampling training data and ensembling different machine learning models. Our best performance XGBoost model achieved 0.404 Average Precision and 0.862 AUC score on test data.</p>
+
+<figure class="third ">
+  
+    
+      <a href="/images/ml/review-length.jpg">
+          <img src="/images/ml/review-length.jpg" alt="placeholder image 1" />
+      </a>
+    
+  
+    
+      <a href="/images/ml/rating-label.jpg">
+          <img src="/images/ml/rating-label.jpg" alt="placeholder image 2" />
+      </a>
+    
+  
+    
+      <a href="/images/ml/table.jpg">
+          <img src="/images/ml/table.jpg" alt="placeholder image 3" />
+      </a>
+    
+  
+  
+    <figcaption>
+</figcaption>
+  
+</figure>
+
+<h2 id="feature-engineering">Feature Engineering</h2>
+
+<h4 id="1-linguistic-features">1. Linguistic Features</h4>
+
+<ul>
+  <li><strong>HTML Tags and URL:</strong> Web-scraped data may contain HTML tags which are not useful in text data, so we use a Python library, BeautifulSoup, to remove them.</li>
+  <li><strong>Accented characters:</strong> Since we are dealing with English reviews, accented characters, e.g. café, can be confusing. In this project, we convert all accented characters into normal English characters, e.g. cafe.</li>
+  <li><strong>Punctuation \&amp; Special Characters:</strong> The Punctuation marks, such as question marks and quotes, inclusive of any special characters are also removed from the text data</li>
+  <li><strong>Stopwords:</strong> In the Spark NLP pipeline, we use the pre-defined stopwords collection from NLTK to extract the words which do not add much value in the article.</li>
+  <li><strong>Lemmatization \&amp; Lower Case:</strong> One word can be written in different form with different tenses. Lemmatization helps us unifying them into a single format. After that, we convert all tokens into the lower case.</li>
+</ul>
+
+<h4 id="2-review-centric-features">2. Review-centric Features</h4>
+<ul>
+  <li>Review length</li>
+  <li>Absolute rating deviation from product’s average rating</li>
+  <li><strong>Earlier time review:</strong> Whether the current review is written within the T=70 months from the first review for this product. It’s reasonable for a spammer to post a review as early as possible to increase their chances of being viewed.</li>
+  <li><strong>Whether a review is written on holiday or not [new]:</strong> It’s more effective to write fake reviews on holidays, since people are more likely to go out on these days.</li>
+  <li>Whether a review is written on weekend or not</li>
+</ul>
+
+<h4 id="3-reviewer-centric-features">3. Reviewer-centric Features</h4>
+
+<ul>
+  <li>Number of reviews per user</li>
+  <li>Max/avg reviews per user per day</li>
+  <li>Percentage of positive/negative reviews per user</li>
+  <li><strong>Burstiness:</strong> Whether all reviews from a user are written within T=28 days.</li>
+  <li><strong>Avg rating deviation:</strong> How different are one’s reviews from others.</li>
+  <li>Avg/Var review length per user</li>
+  <li><strong>Avg content similarity (n-gram):</strong> Compute the average of pairwise jaccard similarities among user’s reviews. A review is represented as a 500d uni-gram vector.</li>
+  <li><strong>Avg content similarity (GloVe):</strong> Compute the average of pairwise cosine similarities among user’s reviews. A review is represented as a 50d GloVe vector. We argue that GloVe can better embed the meaning of the text into a smooth manifold. As a result, it can capture the information where uni-gram cannot.</li>
+</ul>
+
+<h2 id="dealing-with-imbalanced-data">Dealing with Imbalanced Data</h2>
+
+<ul>
+  <li><strong>Random under-sampling (RUS):</strong> Only a subset of samples from the majority class are used. Some important information in the out-of-sample data may be lost.</li>
+  <li><strong>Random over-sampling (ROS):</strong> Each sample in the minority class might be sampled for multiple times. However, replicating too much information may result in over-fitting.</li>
+  <li><strong>SMOTE (Synthetic Minority Oversampling Technique):</strong> Basically, the technique generates new samples by interpolating of its nearest neighbors.</li>
+  <li><strong>ROS + RUS:</strong> This method can benefit from the advantages of both approaches.</li>
+  <li><strong>SMOTE + RUS:</strong> For the model with only the linguistic features, we use this method to create a dataset with 50,000 in both of the target classes.</li>
+  <li><strong>Ensemble of RUS:</strong> Perform RUS several times, each time with a different subset of samples from the majority class. Make the final prediction by voting.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-11T23:42:09+08:00">July 11, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Fake+Reviews+Detection+for+Imbalanced+Dataset%20http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fml%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fml%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fml%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/portfolio/introds/" class="pagination--pager" title="Predicting the Outcome of Professional Basketball Game
+">Previous</a>
+    
+    
+      <a href="/portfolio/nlu/" class="pagination--pager" title="Extractive-Abstractive of Text Summarization Stacking Model
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/GaryLKL" rel="nofollow noopener noreferrer"><i class="fas fa-link" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/kuanlinliu/" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    <!-- <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li> -->
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Gary Liu. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

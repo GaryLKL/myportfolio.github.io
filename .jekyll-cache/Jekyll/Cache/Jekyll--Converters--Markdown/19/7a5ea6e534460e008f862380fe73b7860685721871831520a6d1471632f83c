@@ -1,0 +1,94 @@
+I"�<p></p>
+<p><button type="button" class="btn btn-secondary btn-sm" onclick=" relocate_home()" style="width:120px;height:40px;border:2px blue none;background-color:lightgrey;">Paper Link</button></p>
+
+<script>
+function relocate_home()
+{
+     location.href = "https://garylkl.github.io/pdf_files/ml_final.pdf";
+} 
+</script>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Online reviews provide customers and business owners a good evaluation metric for the target products or services. Therefore, knowing the authenticity of reviews is essential, because they may affect how we make a decision. In this work, we tackled the fake review detection problem by designing new features, re-sampling training data and ensembling different machine learning models. Our best performance XGBoost model achieved 0.404 Average Precision and 0.862 AUC score on test data.</p>
+
+<figure class="third ">
+  
+    
+      <a href="/images/ml/review-length.jpg">
+          <img src="/images/ml/review-length.jpg" alt="placeholder image 1" />
+      </a>
+    
+  
+    
+      <a href="/images/ml/rating-label.jpg">
+          <img src="/images/ml/rating-label.jpg" alt="placeholder image 2" />
+      </a>
+    
+  
+    
+      <a href="/images/ml/table.jpg">
+          <img src="/images/ml/table.jpg" alt="placeholder image 3" />
+      </a>
+    
+  
+  
+    <figcaption>
+</figcaption>
+  
+</figure>
+
+<h2 id="feature-engineering">Feature Engineering</h2>
+
+<h3 id="1-review-centric-features">1. Review-centric Features</h3>
+<ul>
+  <li>Review length</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Absolute rating deviation from product’s average rating \cite{li:2011}: $d_{ij}=</td>
+          <td>r_{ij}- \frac{1}{J}\sum_j r_{ij}</td>
+          <td>$, where $r_{ij}$ is the rating from user $i$ to business $j$.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Earlier time review \cite{mukherjee:20132}: $max(0, 1-(\frac{t_{now}-t_{first}}{T}))$. Whether the current review is written within the $T=70$ months from the first review for this product. It’s reasonable for a spammer to post a review as early as possible to increase their chances of being viewed.</li>
+  <li>Whether a review is written on holiday or not [new]: It’s more effective to write fake reviews on holidays, since people are more likely to go out on these days.</li>
+  <li>Whether a review is written on weekend or not [new]</li>
+</ul>
+
+<h3 id="2-reviewer-centric-features">2. Reviewer-centric Features</h3>
+
+<ul>
+  <li>Number of reviews per user</li>
+  <li>Max/avg reviews per user per day</li>
+  <li>Percentage of positive/negative reviews per user</li>
+  <li>Burstiness \cite{fei:2013}: $max(0, 1-(\frac{t_{last}-t_{first}}{T}))$. Whether all reviews from a user are written within $T=28$ days.</li>
+  <li>Avg rating deviation \cite{fei:2013}: $\frac{1}{I}\sum_i d_{ij}$. How different are one’s reviews from others.</li>
+  <li>Avg/Var review length per user [new]</li>
+  <li>Avg content similarity (n-gram) \cite{fei:2013}: Compute the average of pairwise jaccard similarities among user’s reviews. A review is represented as a 500d uni-gram vector.</li>
+  <li>Avg content similarity (GloVe) [new]: Compute the average of pairwise cosine similarities among user’s reviews. A review is represented as a 50d GloVe vector. We argue that GloVe can better embed the meaning of the text into a smooth manifold. As a result, it can capture the information where uni-gram cannot.</li>
+</ul>
+
+<h3 id="3-linguistic-features">3. Linguistic Features</h3>
+
+<ul>
+  <li><strong>HTML Tags and URL:</strong> Web-scraped data may contain HTML tags which are not useful in text data, so we use a Python library, BeautifulSoup, to remove them.</li>
+  <li><strong>Accented characters:</strong> Since we are dealing with English reviews, accented characters, e.g. café, can be confusing. In this project, we convert all accented characters into normal English characters, e.g. cafe.</li>
+  <li><strong>Punctuation \&amp; Special Characters:</strong> The Punctuation marks, such as question marks and quotes, inclusive of any special characters are also removed from the text data</li>
+  <li><strong>Stopwords:</strong> In the Spark NLP pipeline, we use the pre-defined stopwords collection from NLTK to extract the words which do not add much value in the article.</li>
+  <li><strong>Lemmatization \&amp; Lower Case:</strong> One word can be written in different form with different tenses. Lemmatization helps us unifying them into a single format. After that, we convert all tokens into the lower case.</li>
+</ul>
+
+<h2 id="imbalanced-data">Imbalanced Data</h2>
+
+<p>We remove all special characters and white spaces, lower each character, remove stopwords and lemmatize. Afterwards, we choose pretrained <a href="https://nlp.stanford.edu/projects/glove/">GloVe embedding</a> on Twitter to encode each product description as a 200d vector. Then, we feed a batch with 512 vectors into a multilayer perceptron (MLP). The final layer could be either a sigmoid or softmax layer. In the former case, the output is score within the range of [0,1]. We should scale it back to [1,5] as the original Amazon ratings. In the latter case, the output is the probability for each of the 5 rating classes.</p>
+
+<h2 id="keyword-recommendation">Keyword Recommendation</h2>
+
+<p>Given the description of a Kickstarter campaign as a query document, we would like to the retrieve the most similar documents from the Amazon dataset. The most straightforward idea is to compare its cosine similarity to each document one by one. However, this is compute-intensive. Therefore, we adopt locality sensitive hashing (LSH) to map each 200d GloVe embedding to a lower dimensional binary vector. The close documents in the original vector space will very likely be close in the new space. And we can reduce a great amount of search time.</p>
+
+<p>Finally, we select the high-rated documents within top-k similar documents and compute the mean of their TF-IDF vector. If a word is more important, it will have a higher value in the resulting mean vector.</p>
+:ET
