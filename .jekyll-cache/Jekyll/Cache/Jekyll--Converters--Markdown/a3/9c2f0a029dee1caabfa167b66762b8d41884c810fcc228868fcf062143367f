@@ -1,8 +1,0 @@
-I"$<ul class="toc__menu">
-  <li><a href="#abstract">Abstract</a></li>
-  <li><a href="#methodology">Methodology</a>
-      - {:.} <a href="#1-bertsum">1. BERTSUM</a>
-      - {:.} <a href="#2-textrank">2. TextRank</a>
-      - {:.} <a href="#3-pointer-generator">3. Pointer-Generator</a></li>
-</ul>
-:ET

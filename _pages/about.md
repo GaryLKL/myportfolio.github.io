@@ -3,7 +3,7 @@ title: "About"
 permalink: /about/
 author_profile: true
 header:
-  image: /images/newyork2.jpg
+  image: /images/taipei.jpg
 
 ---
 
